@@ -1,17 +1,13 @@
-const numbers = [];
-let sum = 0;
+#include <stdio.h>
 
+int main() {
+    for (int i = 1; i <= 10; i++) {
+        int col1 = i * 5;
+        int col2 = 100 - ((i - 1) * 10 + 1);
+        int col3 = i;
 
-for (let i = 0; i < 10; i++) {
-  const num = Number(prompt("Enter number " + (i + 1) + ":"));
-  numbers.push(num);
-  sum += num;
+        printf("%d  %d  %d\n", col1, col2, col3);
+    }
+
+    return 0;
 }
-
-
-const average = sum / numbers.length;
-
-
-console.log("Numbers entered: " + numbers.join(", "));
-console.log("Sum: " + sum);
-console.log("Average: " + average);
