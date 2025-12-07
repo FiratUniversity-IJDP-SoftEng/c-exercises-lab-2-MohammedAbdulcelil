@@ -1,7 +1,14 @@
-for (let i = 1; i <= 10; i++) {
-  const col1 = i * 5;
-  const col2 = 100 - ((i - 1) * 10 + 1);
-  const col3 = i;
 
-  console.log(col1 + "  " + col2 + "  " + col3);
+#include <stdio.h>
+
+int main() {
+    for (int i = 1; i <= 10; i++) {
+        int col1 = i * 5;
+        int col2 = 100 - ((i - 1) * 10 + 1);
+        int col3 = i;
+
+        printf("%d  %d  %d\n", col1, col2, col3);
+    }
+
+    return 0;
 }
