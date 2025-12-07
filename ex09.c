@@ -1,19 +1,31 @@
-let numbers = [];
-let input;
+#include <stdio.h>
 
+int main() {
+    int number;
+    int count = 0;
+    int sum = 0;
 
-while (true) {
-  input = Number(prompt("Enter a number (-1 to stop):"));
+    printf("Enter numbers (-1 to stop):\n");
 
-  if (input === -1) {
-    break;  
-  }
-  numbers.push(input);
+    while (1) {
+        scanf("%d", &number);
+
+        if (number == -1) {
+            break; 
+        }
+
+        sum += number; 
+        count++;      
+    }
+
+    if (count > 0) {
+        double average = (double)sum / count;
+        printf("Count of numbers entered: %d\n", count);
+        printf("Sum of numbers: %d\n", sum);
+        printf("Average of numbers: %.2f\n", average);
+    } else {
+        printf("No numbers were entered.\n");
+    }
+
+    return 0;
 }
-let count = numbers.length;
-let sum = numbers.reduce((a, b) => a + b, 0);
-let average = count > 0 ? sum / count : 0;
-
-console.log("Count of numbers entered: " + count);
-console.log("Sum of numbers: " + sum);
-console.log("Average of numbers: " + average);
